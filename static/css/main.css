@@ -1,0 +1,101 @@
+<!--    .bg-navbar {-->
+<!--    background: #030434;-->
+<!--        }-->
+
+.glow {
+  font-size: 20px;
+  color: #fff
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px black, 0 0 40px;
+  }
+
+  to {
+
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px black , 0 0 40px black;
+  }
+}
+
+
+.short {
+        max-width: 800px;
+         margin-left:200px;
+        font-family: 'Crete Round', serif;}
+
+input{
+        width:100px;
+        font-family: 'Crete Round', serif;
+        }
+
+#l{
+    width:450px;
+    font-family: 'Crete Round', serif;
+    }
+
+
+.jumbotron{
+            background-color:  #f2f3f4;
+            text-align:center;
+            font-family: 'Crete Round', serif;
+            }
+
+.b1{
+    margin-left:340px;
+    margin-top:45px;
+    margin-bottom:10px;
+    font-family: 'Crete Round', serif;
+}
+
+#h{
+    margin-left:253px;
+    font-family: 'Crete Round', serif;
+}
+
+#wid{
+    margin-left: 400px;
+    font-family: 'Crete Round', serif;
+    }
+
+#wi{
+    margin-left: 350px;
+    font-family: 'Crete Round', serif;
+    }
+
+
+table{
+    table-layout: fixed;
+    }
+table, th, td {
+  border: 2px solid #DCDCDC ;
+  font-family: 'Crete Round', serif;
+}
+td{
+    word-wrap: break-word;
+    }
+th {
+    text-align:center;
+    font-family: 'Crete Round', serif;
+    background-color: #98AFC7;
+    color: #575764;
+}
+
+
+
+tr:nth-child(even) {
+background-color: #f2f2f2;
+font-family: 'Crete Round', serif;
+}
+
+
+td {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Crete Round', serif;
+}
+

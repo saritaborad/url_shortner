@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron mt-5 hide">
+    <form class="form-inline short mt-5 mb-5" action="{% url 'home-page' %}" method="post">
+        {% csrf_token %}
+        {% if user.is_authenticated %}
+         <h3  style="margin-left:370px;margin-top:15px;">Shorten A URL</h3>
+            <div class="form-group short" >
+                <input class="form-control  mb-2 mt-4 mr-0" id="l" type="url" name="url" placeholder="Enter Original URL" value="" required>
+                <input type="submit" class="btn btn-outline-primary short ml-2 mt-3 pt-2 pb-2" value="Shorten">
+                 <br>
+                <br>
+            </div>
+     </form>
+ </div>
+
+    {% if l_url %}
+    <style> .hide{display:none;}</style>
+    <div style="margin-left:350px;font-family: 'Crete Round', serif;">
+
+         <h5  style="margin-top:100px;">Short URL</h5>
+        <div>
+            <a id="text-copy" href="http://short.ly:8000/{{ short_code }}" target="_blank">http://short.ly:8000/{{short_code}}</a>
+            <button class="btn btn-outline-primary ml-3 py-0" onclick="copyToClipboard()">Copy URL
+            </button>
+        </div>
+        <br>
+         <h5  style="margin-top:30px;">Original URL</h5>
+            <a href="{{l_url}}" target="_blank">{{l_url}}</a>
+        <br>
+        <br>
+        <br>
+        <a class="btn btn-outline-primary pl-4 pr-4" href="{% url 'profile' %}" role="button">Track Your URLS</a>
+        <a class="btn btn-outline-primary pl-4 pr-4" style="margin-left:50px;" href="{% url 'home-page' %}" role="button">Short More URL</a>
+    </div>
+
+        <script>
+            function copyToClipboard() {
+            const str = document.getElementById('text-copy').innerText;
+            const el = document.createElement('textarea');
+            el.value = str;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '600px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert(`Copied: Short URL successfully!`);
+        }
+        </script>
+    {% endif %}
+
+
+    <div>
+        {% else %}
+        <h3 id="h" style="margin-top:70px;">Register or Login to Short URL</h3>
+        <br>
+        <a class="btn btn-outline-primary b1 pl-4 pr-4" href="{% url 'login' %}" role="button">Login</a>
+        <a class="btn btn-outline-primary b1 ml-4 pl-3 pr-3" href="{% url 'register' %}" role="button">Register</a>
+    </div>
+
+    {% endif %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

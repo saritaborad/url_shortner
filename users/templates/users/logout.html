@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron"style="text-align:center;margin-top:100px">
+<div class="row">
+    <div class="col-md-8 mt-5" style="margin-left:200px;margin-top:100px">
+        <h2>You Have Been Logged Out</h2>
+                <a class="btn btn-outline-info mt-4 mb-5 " href="{% url 'login' %}">Log In Again</a>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

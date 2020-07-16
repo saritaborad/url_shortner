@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<!--<style>#wid{margin-left: 400px}</style>-->
+
+<div class="row pt-5" id="wid">
+    <div class="col-md-6">
+    <div class="content-section">
+        <div class="card text-black bg-white " style="max-width: 90rem;">
+  <div class="card-header pl-5 pt-3 "><h2>Log In</h2></div>
+  <div class="card-body pl-5 pr-5">
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group" >
+            <button class="btn btn-outline-info "  type="submit">Login</button>
+        </div>
+    </form>
+    <div class="border-top pt-3 ml-0">
+    <small class="text-muted ">
+        Need An Account ? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+    </small></div>
+</div>
+</div>
+</div>
+{% endblock %}
